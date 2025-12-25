@@ -1,27 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Class Hub</title>
+    <!-- AdSense Global Script (Add this once in <head>) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXX" crossorigin="anonymous"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        header { background-color: #4CAF50; color: white; padding: 1rem; text-align: center; position: relative; }
+        .ad-banner { padding: 0.5rem; text-align: center; border-bottom: 1px solid #ccc; }
+        nav { background-color: #333; padding: 0.5rem; }
+        nav a { color: white; margin: 0 1rem; text-decoration: none; }
+        section { padding: 2rem; max-width: 1200px; margin: auto; }
+        .hero { background-image: url('https://via.placeholder.com/1200x400?text=Fitness+Class'); background-size: cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .classes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .class-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .media-section { margin-top: 1rem; }
+        .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .media-item { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .media-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+        .media-item iframe { width: 100%; height: 200px; border-radius: 4px; }
+        .ad-sidebar { width: 300px; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-left: 2rem; }
+        .ad-in-content { padding: 1rem; margin: 1rem 0; text-align: center; border-radius: 4px; }
+        button { background-color: #4CAF50; color: white; border: none; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px; }
+        footer { background-color: #333; color: white; text-align: center; padding: 1rem; }
+        @media (max-width: 768px) { .ad-sidebar { display: none; } .classes { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-<h1>Privacy Policy for AdPoints</h1>
-<p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our app.</p>
-
-<h2>Information We Collect</h2>
-<ul>
-<li>Personal Data: We do not collect personal data.</li>
-<li>Ad Data: We may use ad networks like AdMob that collect anonymized usage data.</li>
-</ul>
-
-<h2>Use of Information</h2>
-<p>We use the data collected by ad networks to improve our app experience and show relevant ads.</p>
-
-<h2>Third-Party Services</h2>
-<p>We may use third-party services (like Google AdMob) that may collect data according to their privacy policies.</p>
-
-<h2>Contact Us</h2>
-<p>If you have questions about this Privacy Policy, contact us at: support@example.com</p>
+    <!-- Top Banner Ad (Responsive Auto) -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXX"
+             data-ad-slot="XXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    
+    <header>
+        <h1>Fitness Class Hub</h1>
+        <p>Get fit with our expert-led classes!</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#media">Photos & Videos</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div>
+            <h2>Welcome to Your Fitness Journey</h2>
+            <p>Join our community for yoga, HIIT, and more. Book your spot today!</p>
+            <button onclick="alert('Booking feature coming soon!')">Book a Class</button>
+        </div>
+    </section>
+    
+    <section id="classes" style="display: flex; align-items: flex-start;">
+        <div style="flex: 1;">
+            <h2>Our Classes</h2>
+            <div class="classes">
+                <div class="class-card">
+                    <h3>Yoga Flow (Normal)</h3>
+                    <p>Relax and strengthen with our beginner-friendly yoga sessions.</p>
+                    <p><strong>Time:</strong> Mondays 7 PM</p>
+                    <button onclick="toggleSchedule(this)">View Schedule</button>
+                    <div class="schedule" style="display: none;">Full schedule: Mon, Wed, Fri at 7 PM.</div>
+                </div>
+                <div class="class-card">
+                    <h3>HIIT Blast (Medium)</h3>
+                    <p>High-intensity interval training for maximum calorie burn.</p>
+                    <p><strong>Time:</strong> Tuesdays 6 PM</p>
+                    <button onclick="toggleSchedule(this)">View Schedule</button>
+                    <div class="schedule" style="display: none;">Full schedule: Tue, Thu at 6 PM.</div>
+                </div>
+                <div class="class-card">
+                    <h3>Strength Training (Hard)</h3>
+                    <p>Build muscle and power with our weightlifting classes.</p>
+                    <p><strong>Time:</strong> Wednesdays 8 PM</p>
+                    <button onclick="toggleSchedule(this)">View Schedule</button>
+                    <div class="schedule" style="display: none;">Full schedule: Wed, Sat at 8 PM.</div>
+                </div>
+            </div>
+            <!-- In-Content Ad (Fluid Rectangle) -->
+            <div class="ad-in-content">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-gw-3+1f-3d+2z"
+                     data-ad-client="ca-pub-XXXXXX"
+                     data-ad-slot="XXXXXX"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+        <!-- Sidebar Ad (Rectangle 300x250) -->
+        <div class="ad-sidebar">
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-XXXXXX"
+                 data-ad-slot="XXXXXX"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </section>
+    
+    <section id="media">
+        <h2>Photos & Videos by Difficulty</h2>
+        <div class="media-section">
+            <h3>Normal Difficulty (Beginner-Friendly)</h3>
+            <div class="media-grid">
+                <div class="media-item">
+                    <img src="https://via.placeholder.com/300x200?text=Yoga+Pose" alt="Yoga Pose">
+                    <p>Relaxing Yoga Stretch</p>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <p>Beginner Yoga Tutorial</p>
+                </div>
+            </div>
+        </div>
+        <div class="media-section">
+            <h3>Medium Difficulty (Intermediate)</h3>
+            <div class="media-grid">
+                <div class="media-item">
+                    <img src="https://via.placeholder.com/300x200?text=HIIT+Workout" alt="HIIT Workout">
+                    <p>HIIT Circuit in Action</p>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <p>Intermediate HIIT Session</p>
+                </div>
+            </div>
+        </div>
+        <div class="media-section">
+            <h3>Hard Difficulty (Advanced)</h3>
+            <div class="media-grid">
+                <div class="media-item">
+                    <img src="https://via.placeholder.com/300x200?text=Strength+Training" alt="Strength Training">
+                    <p>Heavy Lifting Technique</p>
+                </div>
+                <div class="media-item">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <p>Advanced Strength Workout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Fitness Class Hub, we believe in empowering everyone to lead a healthier life. Our certified instructors tailor classes to all levels, from beginners to pros. Located in downtown, we offer a welcoming space for all.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@fitnessclasshub.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Fit Street, Wellness City</p>
+    </section>
+    
+    <!-- Footer Ad (Responsive Auto) -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXX"
+             data-ad-slot="XXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Fitness Class Hub. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function toggleSchedule(button) {
+            const schedule = button.nextElementSibling;
+            schedule.style.display = schedule.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
